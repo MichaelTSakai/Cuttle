@@ -1,0 +1,35 @@
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><help_text>Space for diagram notes </help_text><element><id>UMLClass</id><coordinates><x>440</x><y>360</y><w>410</w><h>200</h></coordinates><panel_attributes>Playing Card
+--
+-mValue:int
+-mcSuite:Suite
+--
++&lt;&lt;constructor&gt;&gt;PlayingCard()
++&lt;&lt;constructor&gt;&gt;PlayingCard(value:int, cSuite:Suite)
+
+getValue():int
+getSuite():Suite
+
+friend operator&gt;&gt;(&amp;in:istream, &amp;rcPlayingCard:PlayingCard):&amp;istream
+friend operator&lt;&lt;(&amp;out:ostream, &amp;rcPlayingCard:PlayingCard):&amp;ostream
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>430</y><w>320</w><h>130</h></coordinates><panel_attributes>Suite
+--
++meSuite:SUITE
+--
++SUITE:{SPADE, CLOVE, HEART, DIAMOND}
++getSuite():Suite
+
+friend operator&gt;&gt;(&amp;in:istream, &amp;rcSuite:Suite):&amp;istream
+friend operator&lt;&lt;(&amp;out:ostream, &amp;rcSuite:Suite):&amp;ostream</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>470</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>190</y><w>320</w><h>180</h></coordinates><panel_attributes>/Card Container/
+--
+/+addCard(*card:PlayingCard) = 0/
+/+removeCard(value:int):*PlayingCard = 0/
+/+removeCard(value:int, eSuite:SUITE):*PlayingCard = 0/
+
+/+find(value:Int):*PlayingCard = 0/
+/+find(value:int, eSuite:SUITE):*PlayingCard = 0/
+/+operator[](index:size_type):*PlayingCard = 0/
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
